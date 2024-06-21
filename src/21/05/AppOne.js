@@ -1,5 +1,3 @@
-
-
 // import React, {
 //   useCallback,
 //   useMemo,
@@ -120,7 +118,6 @@
 //   }, []);
 
 //   const onGridReady = useCallback((params: GridReadyEvent) => {
-    
 
 //     getData().then((rowData) => params.api.setGridOption("rowData", rowData));
 //   }, []);

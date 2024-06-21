@@ -109,10 +109,7 @@ const Chart = () => {
           overflow: "hidden",
         }}
       >
-        <div
-          style={gridStyle}
-          className={"ag-theme-quartz"}
-        >
+        <div style={gridStyle} className={"ag-theme-quartz"}>
           <AgGridReact
             columnDefs={columnDefs}
             defaultColDef={defaultColDef}
@@ -156,4 +153,3 @@ const Chart = () => {
 };
 
 export default Chart;
-

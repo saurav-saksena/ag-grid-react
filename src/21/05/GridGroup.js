@@ -1,12 +1,9 @@
-
 // import React from 'react';
 // import { AgGridReact } from 'ag-grid-react';
 // import 'ag-grid-community/styles/ag-grid.css';
 // import 'ag-grid-community/styles/ag-theme-alpine.css';
 
 // const MyGrid = () => {
-   
-   
 
 //     return (
 //         <div className="ag-theme-alpine" style={{ height: '500px', width: '100%' }}>
@@ -14,9 +11,9 @@
 //                 columnDefs={columnDefs}
 //                 autoGroupColumnDef={autoGroupColumnDef}
 //                 rowData={rowData}
-              
+
 //                 animateRows={true}
-               
+
 //             />
 //             hello
 //         </div>
@@ -25,8 +22,6 @@
 
 // export default MyGrid;
 
-
-
 // import React from 'react';
 // import { AgGridReact } from 'ag-grid-react';
 // import 'ag-grid-community/styles/ag-grid.css';
@@ -34,7 +29,7 @@
 
 // const MyGrid = () => {
 //     const columnDefs = [
-//         { 
+//         {
 //             headerName: 'Name(ID)',
 //             field: 'name',
 //             valueGetter: (params) => {
@@ -64,7 +59,7 @@
 //         headerName: 'Name(ID)',
 //         field: 'name',
 //         cellRenderer: 'agGroupCellRenderer',
-        
+
 //         floatingFilter: true, // Enable filtering for the grouped column
 //         resizable: true
 //     };

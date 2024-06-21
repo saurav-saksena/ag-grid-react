@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const CustomFilterPanel = ({ applyFilter }) => {
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   const handleFilterChange = (e) => {
     setFilterText(e.target.value);

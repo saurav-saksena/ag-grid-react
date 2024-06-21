@@ -4,7 +4,6 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import "ag-grid-enterprise";
 
-
 const groupData = [
   {
     onHierarchy: ["Panther Lake Platform"],
@@ -47,11 +46,24 @@ const groupData = [
 export default function HyperlinkTreeData() {
   const [rowDataNew, setRowDataNew] = useState(groupData);
   const [columnDefs, setColumnDefs] = useState([
-    { headerName: "Item Type", field: "itemType", width: 200 , cellRenderer: function(params) {
-    
-
-      return <a className='hyper--cell' href="https://www.ag-grid.com/react-data-grid/excel-export-hyperlinks/" target="_blank" rel="noreferrer"> {params.value} </a>
-                }},
+    {
+      headerName: "Item Type",
+      field: "itemType",
+      width: 200,
+      cellRenderer: function (params) {
+        return (
+          <a
+            className="hyper--cell"
+            href="https://www.ag-grid.com/react-data-grid/excel-export-hyperlinks/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            {params.value}{" "}
+          </a>
+        );
+      },
+    },
     { headerName: "Data Completeness", field: "dataComplete", width: 330 },
     { headerName: "3rd Party Compliance", field: "thirdParty" },
   ]);
@@ -64,7 +76,7 @@ export default function HyperlinkTreeData() {
   // const rowGroupCallback = (params) => {
   //   return params.node.key;
   // };
-  
+
   const getIndentClass = (params) => {
     var indent = 0;
     var node = params.node;
@@ -74,7 +86,7 @@ export default function HyperlinkTreeData() {
     }
     return "indent-" + indent;
   };
-  
+
   const autoGroupColumnDef = useMemo(() => {
     return {
       cellClass: getIndentClass,
@@ -84,9 +96,6 @@ export default function HyperlinkTreeData() {
       minWidth: 550,
       cellRendererParams: {
         suppressCount: true,
-       
-        
-
       },
 
       // valueGetter: (params) => {
@@ -105,7 +114,6 @@ export default function HyperlinkTreeData() {
       //   return "";
       // },
 
-
       // cellRenderer: (params) => {
       //   if (params.data && params.data.onHierarchy && params.data.id) {
       //     return <a href="">{params.data.onHierarchy[params.data.onHierarchy.length - 1]} ({params.data.id})</a>;
@@ -114,7 +122,6 @@ export default function HyperlinkTreeData() {
       // },
     };
   }, []);
-
 
   const getDataPath = useCallback((data) => {
     return data.onHierarchy;
@@ -154,7 +161,6 @@ export default function HyperlinkTreeData() {
   }, []);
   return (
     <div className="ag-theme-alpine layout-grid-sty" style={{ height: 330 }}>
-      
       <AgGridReact
         rowData={rowDataNew}
         columnDefs={columnDefs}
@@ -168,6 +174,3 @@ export default function HyperlinkTreeData() {
     </div>
   );
 }
-
-
-

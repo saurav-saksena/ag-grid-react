@@ -1,4 +1,11 @@
-import React, { useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
@@ -15,11 +22,11 @@ import { useParams } from "react-router-dom";
 ModuleRegistry.registerModules([ClientSideRowModelModule, RowGroupingModule]);
 
 const NestedTreeGrouping = () => {
-  const{changedPageName,changeColor}=useContext(GridContext)
+  const { changedPageName, changeColor } = useContext(GridContext);
   const gridRef = useRef();
   const gridStyle = useMemo(() => ({ height: "100%", width: "100%" }), []);
   const [rowData, setRowData] = useState(groupDataTree);
-const {id}=useParams()
+  const { id } = useParams();
 
   const [columnDefs, setColumnDefs] = useState(columnDefsData);
   const defaultColDef = {
@@ -28,15 +35,19 @@ const {id}=useParams()
     filter: "agTextColumnFilter",
     filterParams: { newRowsAction: "keep" },
     cellHeight: 15,
-    
   };
   const getFileCellRenderer = () => {
     class FileCellRenderer {
       init(params) {
         var tempDiv = document.createElement("div");
         var value = params.value;
-        var icon=params.data.itemType==="Product Variant"?"bi bi-calendar-event m-2":"bi bi-box m-2"
-        tempDiv.innerHTML =!params.data.toHide?`<a href="https://www.ag-grid.com/react-data-grid/tree-data/" style="text-decoration:none;" target="_blank"><i class="${icon}"></i>${value}</a>`:" "
+        var icon =
+          params.data.itemType === "Product Variant"
+            ? "bi bi-calendar-event m-2"
+            : "bi bi-box m-2";
+        tempDiv.innerHTML = !params.data.toHide
+          ? `<a href="https://www.ag-grid.com/react-data-grid/tree-data/" style="text-decoration:none;" target="_blank"><i class="${icon}"></i>${value}</a>`
+          : " ";
         this.eGui = tempDiv.firstChild;
       }
       getGui() {
@@ -59,11 +70,9 @@ const {id}=useParams()
         suppressCount: true,
         innerRenderer: getFileCellRenderer(),
       },
-
-      
     };
   }, []);
-  
+
   // const autoGroupColumnDef = useMemo(() => {
   //   return {
   //     headerName: "Name(ID)",
@@ -122,13 +131,12 @@ const {id}=useParams()
         },
       },
     ],
-    
   };
   const rowHeight = 35;
-useEffect(()=>{
-  changedPageName("Test Details")
-  changeColor("text-success")
-},[])
+  useEffect(() => {
+    changedPageName("Test Details");
+    changeColor("text-success");
+  }, []);
   return (
     <div style={{ height: 600 }}>
       <div className="example-wrapper">
@@ -144,7 +152,6 @@ useEffect(()=>{
             sideBar={sideBarDef}
             getDataPath={getDataPath}
             rowHeight={rowHeight}
-           
           />
         </div>
       </div>
