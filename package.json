@@ -1,0 +1,55 @@
+{
+  "name": "reactfrontone",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ag-grid-community/all-modules": "^27.3.0",
+    "@ag-grid-community/client-side-row-model": "^31.3.2",
+    "@ag-grid-community/core": "^31.3.2",
+    "@ag-grid-community/csv-export": "^31.3.2",
+    "@ag-grid-community/react": "^31.3.2",
+    "@ag-grid-enterprise/row-grouping": "^31.3.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ag-charts-community": "^9.3.1",
+    "ag-charts-react": "^9.3.1",
+    "ag-grid-charts-enterprise": "^31.3.2",
+    "ag-grid-enterprise": "^31.3.1",
+    "ag-grid-react": "^31.3.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "file-saver": "^2.0.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "sheetjs-style": "^0.15.8",
+    "web-vitals": "^2.1.4"
+  },
+  
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

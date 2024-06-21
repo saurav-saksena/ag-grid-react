@@ -1,0 +1,34 @@
+.cust_msg{
+    position: fixed;
+    top:0;
+    left:0;
+    color: red;
+    z-index: 4747;
+}
+.custom_checkbox{
+    display: flex;
+    align-items: center;
+}
+.custom_checkbox input{
+    width: 16px;
+    height: 16px;
+}
+.top_released_button{
+    text-decoration: none;
+    color: rgb(61, 121, 241);
+    border:none;
+    margin-left: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.nav--header{
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+.nav--header span{
+   margin-left: 20px; 
+   font-weight: bold;
+   user-select: none;
+}

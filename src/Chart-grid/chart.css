@@ -1,0 +1,47 @@
+.chart--container{
+    width: 60%;
+    height: 200px;
+    background-color: ant
+    iquewhite;
+    /* margin: auto; */
+}
+.chart-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.chart-axis-label{
+    font-size: 10px;
+    fill: black;
+}
+.chart-bar{
+    fill: rgb(166, 113, 67);
+    width: 10px;
+}
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .chart-container {
+    width: 80%;
+    margin:10px auto;
+    border:1px solid rgb(166, 113, 67)
+  }
+  /* .ag-side-bar {
+    background-color: white;
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100%; 
+  } */
+ 
+  /*  */
+  #rangeChart .ag-chart-element.ag-column-series rect {
+    fill: rgb(255, 38, 0) !important; /* Change the color here */
+  }

@@ -1,0 +1,25 @@
+.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+#myGrid {
+    flex: 1 1 0px;
+    width: 100%;
+}
+/* .ag-theme-alpine{
+    position: relative !important;
+}
+  .ag-side-bar {
+    background-color: white;
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100vh; 
+    z-index: 100;
+  } */
+   .hideValue{
+    text-decoration: none;
+   }
