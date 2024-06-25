@@ -46,7 +46,7 @@ const NestedTreeGrouping = () => {
             ? "bi bi-calendar-event m-2"
             : "bi bi-box m-2";
         tempDiv.innerHTML = !params.data.toHide
-          ? `<a href="https://www.ag-grid.com/react-data-grid/tree-data/" style="text-decoration:none;" target="_blank"><i class="${icon}"></i>${value}</a>`
+          ? `<a href="https://www.ag-grid.com/react-data-grid/tree-data/" style="text-decoration:none;" target="_blank"><i class="${icon}"></i>${value}(${params.data.id})</a>`
           : " ";
         this.eGui = tempDiv.firstChild;
       }
