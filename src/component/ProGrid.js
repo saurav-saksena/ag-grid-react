@@ -299,7 +299,7 @@ const ProGrid = () => {
       setSearchConditon(true);
     }
 
-    if (searchWord === "empty") {
+    if (searchWord === "undefined") {
       setAllRowData([]);
     } else {
       setAllRowData(rowData);
